@@ -1,0 +1,112 @@
+#HISTORIAS DE PERFIL DE NETFLEX
+	by Duran Leonardo
+
+Como  <Usuario, Persona>
+	Concepto
+Quiero <Objetivo, Comportamiento>
+	Concepto
+Para <Motivo, Razón, Valor>
+	Concepto
+
+
+-----Nunca más pierdas tu progreso: Reproducción inteligente en Netflex-----
+
+PERFIL: 
+	Usuario que ve películas en múltiples dispositivos (celular, TV, laptop).
+
+NECESIDAD: 
+	Reanudar el contenido exactamente donde lo dejó, si es que cierro el la aplicación,
+	sin perder el progreso de hasta donde he visto.
+
+PROPÓSITO:  
+	Optimizar su tiempo de visualización y evitar frustraciones al buscar escenas manualmente.
+
+
+
+-----Netflex Studio: Publica tu película sin intermediarios-----
+
+PERFIL: 
+	Director/productor indie que busca monetizar su trabajo sin intermediarios.
+
+NECESIDAD: 
+	Subir películas directamente a Netflex y acceder a estadísticas de audiencia en tiempo real.
+
+PROPÓSITO: 
+	Recibir ganancias justas y entender a su público objetivo sin depender de distribuidoras tradicionales.
+
+
+
+-----Modo Nostalgia: Redescubre películas olvidadas con IA-----
+
+PERFIL: 
+	Estudio de cine con catálogo de películas antiguas (ej: años 80s-90s).
+	
+NECESIDAD:
+	Revivir interés en su contenido clásico con recomendaciones basadas en nostalgia. 
+
+PROPÓSITO: 
+	Maximizar ingresos sin invertir en remasterizaciones costosas.
+
+
+
+
+
+#CRITERIOS DE ACEPTACION
+
+Escenario 1.1: Sincronización de progreso al cambiar de dispositivo
+Dado: El usuario ha visto 15 minutos de una película en su laptop
+Y: Cierra la sesión en Netflex
+Cuando: Inicia sesión en su celular
+Y: Selecciona la misma película
+Entonces: La reproducción comienza automáticamente en el minuto 15:00
+Y: Se muestra un badge "Continuar desde donde lo dejaste".
+
+Escenario 1.2: Tolerancia a fallos de conexión
+Dado: El usuario perdió internet por 10 minutos mientras veía una serie
+Cuando: La conexión se restablece
+Entonces: El progreso se guardó localmente cada 30 segundos
+Y: La reproducción reanuda en el último segundo guardado (sin saltos).
+
+Escenario 1.3: Límite de tiempo para sincronización
+Dado: El usuario pausa una película en su TV
+Cuando: Abre Netflex en su tablet dentro de 24 horas
+Entonces: El progreso está sincronizado con un desfase máximo de 5 segundos
+Y: Si pasan 48 horas sin actividad, el progreso se mantiene pero se muestra un aviso "¿Continuar desde aquí?".
+
+
+
+Escenario 2.1: Carga de contenido con formato válido
+Dado: El creador sube un archivo MP4 (resolución 1080p o 4K)
+Y: Completa los metadatos (título, género, año)
+Cuando: Envía el formulario
+Entonces: El sistema procesa el video en ≤1 hora
+Y: Muestra un estado de progreso en tiempo real (ej: 25% completado).
+
+Escenario 2.2: Acceso a estadísticas de audiencia
+Dado: La película ha tenido 1,000 reproducciones en 7 días
+Cuando: El creador accede al dashboard
+Entonces: Ve un gráfico de reproducciones por día
+Y: Un desglose demográfico (ej: 60% mujeres de 18-25 años en México).
+
+
+
+Escenario 3.1: Recomendaciones basadas en nostalgia
+Dado: El usuario ha visto 3 películas de los 80s en el último mes
+Cuando: Abre la sección Modo Nostalgia
+Entonces: El sistema muestra un carrusel "Clásicos que amaste en los 80s"
+Y: Incluye al menos 2 títulos no vistos por el usuario.
+
+Escenario 3.2: Generación de bundles temáticos
+Dado: El estudio tiene 50 películas de terror de los 90s en el catálogo
+Cuando: La IA analiza el catálogo cada 24 horas
+Entonces: Crea un bundle "Noches de Terror Retro" con 5 películas
+Y: Cada bundle incluye una sinopsis generada por IA (mínimo 200 caracteres).
+
+Escenario 3.3: Métricas de rendimiento para estudios
+Dado: Un bundle de clásicos se publica durante 1 semana
+Cuando: El estudio accede al informe de rendimiento
+Entonces: Ve reproducciones totales, tiempo promedio de visualización
+Y: Un cálculo estimado de ingresos generados por ese bundle.
+
+
+
